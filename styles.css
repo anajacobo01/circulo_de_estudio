@@ -1,0 +1,15 @@
+/* 
+selectores 
+id #
+clase .
+tagname nombre_elemento 
+universal 
+ */
+
+ /* selector de id o tagname */
+
+ #contenedor {
+     width: 400px;
+     height: 400px;
+     background-color: red;
+ }
