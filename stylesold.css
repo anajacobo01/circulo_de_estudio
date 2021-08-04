@@ -1,0 +1,104 @@
+/* 
+selectores 
+id #
+clase .
+tagname nombre_elemento 
+universal 
+ */
+
+ /* selector de id o tagname */
+
+ #contenedor {
+     width: 600px;
+     height: 600px;
+     background-color: red;
+     /* display:flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;  */
+     display: grid;
+     grid-template: 20px 400px auto / 40px 200px 100px auto;
+     grid-template-areas: 
+     '. . . .'
+     '. areauno . areatres'
+     '. areacuatro . areados';
+ }
+ #contenedor > div:nth-child(1){
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3; */
+    grid-area: areauno;
+    justify-self: end;
+    align-self: start;
+ }
+ #contenedor > div:nth-child(2){
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4; */
+    grid-area: areados;
+    justify-self: center;
+    align-self: center;
+ }
+ #contenedor > div:nth-child(3){
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3; */
+    grid-area: areatres;
+    justify-self: center;
+    align-self: end;
+ }
+ 
+ #contenedor > div:nth-child(4){
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4; */
+    grid-area: areacuatro;
+    justify-self: stretch;
+    align-self: stretch; 
+    width: auto;
+    height: auto;
+    
+ }
+
+ .item{
+     width: 100px;
+     height: 100px;
+     background-color: green;
+     border: 1px, solid, black;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+ }
+ .son{
+     width: 25px;
+     height: 25px;
+     background-color: red;
+     border: 1px solid black;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+/*  
+ #tres{
+     justify-content: flex-end;
+     align-items: flex-end;
+ } */
+ #contenedor div {
+      background-color: yellow;
+ }
+ .item, .son {
+     border: .5px dotted purple;
+ }
